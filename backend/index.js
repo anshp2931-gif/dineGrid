@@ -20,17 +20,26 @@ app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'DineGrid API is running' });
 });
 
-// Database connection
-const MONGO_URL = process.env.MONGO_URL;
-const PORT = process.env.PORT || 5000;
+// Database connection — only start listening when NOT on Vercel (serverless)
+if (process.env.NODE_ENV !== 'production') {
+  const MONGO_URL = process.env.MONGO_URL;
+  const PORT = process.env.PORT || 5000;
 
-mongoose.connect(MONGO_URL)
-  .then(() => {
-    console.log('✅ Connected to MongoDB');
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
+  mongoose.connect(MONGO_URL)
+    .then(() => {
+      console.log('✅ Connected to MongoDB');
+      app.listen(PORT, () => {
+        console.log(`🚀 Server running on port ${PORT}`);
+      });
+    })
+    .catch((err) => {
+      console.error('❌ MongoDB connection error:', err.message);
     });
-  })
-  .catch((err) => {
+} else {
+  // On Vercel: connect to MongoDB without starting a server
+  mongoose.connect(process.env.MONGO_URL).catch((err) => {
     console.error('❌ MongoDB connection error:', err.message);
   });
+}
+
+export default app;
