@@ -1,7 +1,19 @@
 import { MapPin, ChefHat, Calendar, Star, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Hero = () => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    if (user) {
+      navigate('/book/date');
+    } else {
+      navigate('/login', { state: { from: '/book/date' } });
+    }
+  };
+
   return (
     <div className="relative bg-[var(--color-neutral)] text-white overflow-hidden min-h-[680px] flex items-center justify-center">
       {/* Background Image */}
@@ -43,14 +55,14 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-14">
-          <Link
-            to="/book/date"
+          <button
+            onClick={handleGetStarted}
             className="group flex items-center justify-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white px-8 py-4 rounded-xl font-bold text-base transition-all w-full sm:w-auto shadow-lg shadow-green-900/40"
           >
             <Calendar className="w-5 h-5" />
             Get Started
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </button>
           <button className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-xl font-bold text-base transition-all w-full sm:w-auto border border-white/15">
             <ChefHat className="w-5 h-5" />
             How It Works

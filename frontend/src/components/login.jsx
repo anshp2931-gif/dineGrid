@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { User, ShieldCheck, UtensilsCrossed } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
@@ -10,6 +10,7 @@ const Login = () => {
   const [error, setError] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,8 +21,17 @@ const Login = () => {
     setError('');
     try {
       const userData = await login(email, password, role);
-      if (userData.role === 'admin') navigate('/admin/dashboard');
-      else navigate('/menu');
+      
+      // If the user was redirected here from a gated page, send them back
+      const from = location.state?.from;
+      
+      if (from) {
+        navigate(from);
+      } else if (userData.role === 'admin') {
+        navigate('/admin/dashboard');
+      } else {
+        navigate('/menu');
+      }
     } catch (err) {
       setError(err);
     }
