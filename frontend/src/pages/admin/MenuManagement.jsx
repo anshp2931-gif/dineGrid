@@ -18,12 +18,12 @@ const MenuManagement = () => {
   return (
     <AdminLayout>
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
           <div>
             <h1 className="text-2xl font-bold text-[#171d16]">Menu Management</h1>
             <p className="text-sm text-[#6f7a6b] mt-0.5">Manage your digital menu and pricing</p>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
             <div className="flex items-center gap-2 bg-white border border-[#becab9] rounded-full px-4 py-2">
               <Search className="w-4 h-4 text-[#6f7a6b]" />
               <input placeholder="Search items..." className="text-sm outline-none bg-transparent text-[#171d16] placeholder:text-[#6f7a6b] w-40" />
@@ -48,8 +48,8 @@ const MenuManagement = () => {
         </div>
 
         {/* Menu Table */}
-        <div className="bg-white rounded-xl border border-[#becab9] shadow-sm overflow-hidden">
-          <table className="w-full text-sm">
+        <div className="bg-white rounded-xl border border-[#becab9] shadow-sm overflow-x-auto">
+          <table className="w-full text-sm min-w-[700px]">
             <thead className="bg-[#f0f6ea] border-b border-[#becab9]">
               <tr>
                 <th className="px-5 py-3.5 text-left text-[11px] font-bold text-[#6f7a6b] uppercase tracking-wider">Item</th>
