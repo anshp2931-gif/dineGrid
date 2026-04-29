@@ -1,6 +1,7 @@
 import { MapPin, ChefHat, Calendar, Star, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import heroBg from '../assets/premium-hero-bg.png';
 
 const Hero = () => {
   const { user } = useAuth();
@@ -19,7 +20,7 @@ const Hero = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center scale-105"
-        style={{ backgroundImage: 'url("/src/assets/premium-hero-bg.png")' }}
+        style={{ backgroundImage: `url(${heroBg})` }}
       />
 
       {/* Dark overlay — solid, no fade to white */}

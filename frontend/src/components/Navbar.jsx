@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png';
 import { Menu, X, Home, Compass, Tag, UtensilsCrossed, HelpCircle, LogIn, LogOut, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
@@ -41,7 +42,7 @@ const Navbar = () => {
 
           {/* Left: Logo & Brand Name */}
           <Link to="/" className="flex items-center gap-2 group cursor-pointer shrink-0">
-            <img src="/src/assets/logo.png" alt="DineGrid Logo" className="h-8 w-8 object-contain" />
+            <img src={logo} alt="DineGrid Logo" className="h-8 w-8 object-contain" />
             <span className="text-xl lg:text-2xl font-[var(--font-headline)] text-[var(--color-primary)] tracking-tight">DineGrid</span>
           </Link>
 
@@ -132,7 +133,7 @@ const Navbar = () => {
           >
             <div className="flex justify-between items-center h-20 px-4 sm:px-6 border-b border-white/5">
               <div className="flex items-center gap-2">
-                <img src="/src/assets/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
+                <img src={logo} alt="Logo" className="h-8 w-8 object-contain" />
                 <span className="text-xl font-[var(--font-headline)] text-[var(--color-primary)]">DineGrid</span>
               </div>
             </div>

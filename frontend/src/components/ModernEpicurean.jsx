@@ -1,5 +1,9 @@
 import React from 'react';
-import { Clock, Star } from 'lucide-react';
+import { Clock, Star, UtensilsCrossed, Users, MapPin } from 'lucide-react';
+import epicBurger from '../assets/epic_burger.png';
+import epicPizza from '../assets/epic_pizza.png';
+import epicChef from '../assets/epic_chef.png';
+import epicCocktail from '../assets/epic_cocktail.png';
 
 const ModernEpicurean = () => {
   return (
@@ -45,7 +49,7 @@ const ModernEpicurean = () => {
               {/* Top Left - Burger */}
               <div className="rounded-3xl overflow-hidden h-48 bg-gray-200">
                 <img 
-                  src="/src/assets/epic_burger.png" 
+                  src={epicBurger} 
                   alt="Premium Burger" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -54,7 +58,7 @@ const ModernEpicurean = () => {
               {/* Top Right - Woodfire Pizza */}
               <div className="rounded-3xl overflow-hidden h-48 bg-orange-100">
                 <img 
-                  src="/src/assets/epic_pizza.png" 
+                  src={epicPizza} 
                   alt="Woodfire Pizza" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -63,7 +67,7 @@ const ModernEpicurean = () => {
               {/* Bottom Left - Chef */}
               <div className="rounded-3xl overflow-hidden h-48 bg-orange-100 flex items-center justify-center">
                 <img 
-                  src="/src/assets/epic_chef.png" 
+                  src={epicChef} 
                   alt="Expert Chef" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -72,7 +76,7 @@ const ModernEpicurean = () => {
               {/* Bottom Right - Cocktail */}
               <div className="rounded-3xl overflow-hidden h-48 bg-gray-900">
                 <img 
-                  src="/src/assets/epic_cocktail.png" 
+                  src={epicCocktail} 
                   alt="Signature Cocktail" 
                   className="w-full h-full object-cover opacity-90 hover:scale-105 hover:opacity-100 transition-all duration-500"
                 />

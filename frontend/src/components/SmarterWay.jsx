@@ -1,5 +1,7 @@
 import React from 'react';
 import { ShieldCheck, Zap, Heart, CheckCircle2, TrendingUp, Users } from 'lucide-react';
+import hungryDiner from '../assets/hungry-diner.png';
+import restaurateur from '../assets/restaurateur.png';
 
 const SmarterWay = () => {
   return (
@@ -20,7 +22,7 @@ const SmarterWay = () => {
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 hover:shadow-2xl transition-shadow duration-300 border border-gray-100 flex flex-col">
             <div className="h-64 overflow-hidden relative">
               <img 
-                src="/src/assets/hungry-diner.png" 
+                src={hungryDiner} 
                 alt="Hungry Diner" 
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
               />
@@ -57,7 +59,7 @@ const SmarterWay = () => {
           <div className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 hover:shadow-2xl transition-shadow duration-300 border border-gray-100 flex flex-col">
             <div className="h-64 overflow-hidden relative">
               <img 
-                src="/src/assets/restaurateur.png" 
+                src={restaurateur} 
                 alt="Restaurateur" 
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
               />
