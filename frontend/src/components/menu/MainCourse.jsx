@@ -54,7 +54,7 @@ const mainCourseItems = [
     name: "Exotic Vegetable Sizzler",
     price: "$28",
     desc: "A smoking hot platter of grilled vegetables, herb rice, and crispy fries with a signature garlic pepper sauce.",
-    img: "https://images.unsplash.com/photo-1600239448128-917653c5bf77?q=80&w=687&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1761315414522-a732eb715497?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tag: "Sizzling Special"
   }
 ];
