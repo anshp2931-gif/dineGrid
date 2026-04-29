@@ -1,4 +1,7 @@
 import React from 'react';
+import quickBites from '../assets/quick-bites.png';
+import dateNight from '../assets/date-night.png';
+import lateNight from '../assets/late-night.png';
 
 const collections = [
   {
@@ -6,21 +9,21 @@ const collections = [
     title: "Quick Bites",
     badge: "Under 30 mins",
     badgeColor: "bg-[var(--color-primary)] text-white",
-    image: "/src/assets/quick-bites.png"
+    image: quickBites
   },
   {
     id: 2,
     title: "Date Night",
     badge: "Romantic",
     badgeColor: "bg-[var(--color-tertiary)] text-white",
-    image: "/src/assets/date-night.png"
+    image: dateNight
   },
   {
     id: 3,
     title: "Late Night Legends",
     badge: "Open past 12am",
     badgeColor: "bg-[var(--color-secondary)] text-white",
-    image: "/src/assets/late-night.png"
+    image: lateNight
   }
 ];
 

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +14,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3 group cursor-pointer">
             <div className="relative">
                <img 
-                 src="/src/assets/logo.png" 
+                 src={logo} 
                  alt="DineGrid Logo" 
                  className="h-10 w-10 rounded-full border-2 border-[#4CAF50] bg-white p-1.5 shadow-sm transform transition-transform group-hover:rotate-12" 
                />

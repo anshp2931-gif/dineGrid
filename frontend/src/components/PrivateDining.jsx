@@ -1,4 +1,5 @@
 import React from 'react';
+import privateDining from '../assets/private_dining.png';
 
 const PrivateDining = () => {
   return (
@@ -9,7 +10,7 @@ const PrivateDining = () => {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img 
-              src="/src/assets/private_dining.png" 
+              src={privateDining} 
               alt="Private Dining Room" 
               className="w-full h-full object-cover"
             />

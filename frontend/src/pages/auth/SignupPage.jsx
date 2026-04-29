@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import logo from '../../assets/logo.png';
+import foodHero from '../../assets/food_hero.png';
 
 export default function Signup() {
   const [role, setRole] = useState("customer");
@@ -47,7 +49,7 @@ export default function Signup() {
         <div className="relative hidden w-1/2 flex-col items-center justify-center overflow-hidden bg-black lg:flex">
           {/* Background Food Hero Image */}
           <img
-            src="/src/assets/food_hero.png"
+            src={foodHero}
             alt="Premium Culinary Dish"
             className="absolute inset-0 h-full w-full object-cover opacity-60"
           />
@@ -58,7 +60,7 @@ export default function Signup() {
           {/* Branding Content */}
           <div className="relative z-10 flex flex-col items-center p-12 text-center text-white">
             <img
-              src="/src/assets/logo.png"
+              src={logo}
               alt="DineGrid Logo"
               className="mb-8 h-40 w-40 rounded-full border-4 border-[#4CAF50] bg-white/10 p-4 shadow-2xl backdrop-blur-sm transition-transform duration-500 hover:scale-105"
             />
