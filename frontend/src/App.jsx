@@ -71,6 +71,7 @@ function App() {
     <HelmetProvider>
       <AuthProvider>
         <BrowserRouter>
+        
           <Routes>
             {/* ── Public routes ── */}
             <Route path="/" element={<LandingPage />} />

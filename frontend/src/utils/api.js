@@ -1,7 +1,12 @@
 import axios from 'axios';
 
-const rawBase = import.meta.env.VITE_API_URL?.replace(/\/$/, '') || '';
-const baseURL = rawBase ? `${rawBase}/api` : 'https://backend-lyart-xi-67.vercel.app/api';
+const getBaseURL = () => {
+  const envUrl = (import.meta.env.VITE_API_URL || '').trim().replace(/\/$/, '');
+  if (!envUrl) return 'http://localhost:5000/api';
+  return envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`;
+};
+
+const baseURL = getBaseURL();
 
 const api = axios.create({
   baseURL,

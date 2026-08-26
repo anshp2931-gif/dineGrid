@@ -11,7 +11,7 @@ const ModernEpicurean = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
           
-          {/* Left Content */}
+         
           <div className="flex-1">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-[var(--font-headline)] mb-6 tracking-tight">
               Designed for the <span className="text-[var(--color-neutral)] opacity-70">Modern</span> Epicurean
@@ -64,7 +64,7 @@ const ModernEpicurean = () => {
                 />
               </div>
 
-              {/* Bottom Left - Chef */}
+             
               <div className="rounded-3xl overflow-hidden h-36 sm:h-48 bg-orange-100 flex items-center justify-center">
                 <img 
                   src={epicChef} 
@@ -73,7 +73,7 @@ const ModernEpicurean = () => {
                 />
               </div>
 
-              {/* Bottom Right - Cocktail */}
+             
               <div className="rounded-3xl overflow-hidden h-36 sm:h-48 bg-gray-900">
                 <img 
                   src={epicCocktail} 

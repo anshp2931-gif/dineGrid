@@ -15,6 +15,7 @@ const Login = () => {
   const { login } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +28,7 @@ const Login = () => {
     try {
       const userData = await login(email, password, role);
       
-      // If the user was redirected here from a gated page, send them back
+    
       const from = location.state?.from;
       
       if (from) {
